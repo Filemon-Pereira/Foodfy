@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    border: 0;
+    text-decoration: none;
+}
+
+:root{
+    --color-chef: #777;
+    --color-description: #111;
+    --color-title-about: #111;
+    --color-paragraph-about: #444;
+}
+
+body{
+    font-family: 'Roboto,Arial, Helvetica, sans-serif';
+}
+
+header {
+    max-width: 940px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 38px 0px 20px;
+}
+
+.logo {
+    position: relative;
+    margin-right: 122px;
+    cursor: pointer;
+}
+
+nav {
+    font-size: 1em;
+    font-family: 'Roboto';
+}
+
+nav > a {
+    display: inline-block;
+    width: 3.5em;
+    height: 19px;
+    line-height: 19px;
+    color: #111;
+    margin-right: 30px;
+}
+
+nav > a:hover{
+    font-weight: 500;
+}
+
+a:active{
+    color: #111;
+    font-weight: 500;
+}
+/* START HERO */
+.hero{
+    max-width: 940px;
+    height: 366px;
+    background-color: #FBDFDB;
+    border-radius: 30px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.hero .content{
+    position: relative;
+    top: 117px;
+    left: 60px;
+    right: 259px;
+}
+
+.content h1 {
+    font-family: 'Roboto';
+    font-size: 2em;
+    color: #111;
+}
+
+.content p {
+    width: 316px;
+    height: 84px;
+    font-size: 1.12em;
+    color: #000;
+    line-height: 28px;
+    opacity: 0.7;
+}
+
+.chefe{
+    align-self: flex-end;
+    left: 248px;
+    position: relative;
+}
+/* END HERO */
+
+/* START DICHES */
+.dishes-container {
+    margin: 3em auto;
+    max-width: 940px;
+    height: 504px;    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: relative;
+    gap: 20px;
+}
+
+.dishes-container > h1 {
+    font-family: 'Roboto';
+    color: #111;
+    font-size: 1.5em;
+    font-weight: bold;
+    position: absolute;
+} 
+
+.card {
+    width: 300px;
+    height: 140px;
+    position: relative;
+    margin-top: 3em;
+    
+}
+
+.card-image > img {
+    width: 100%;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.card-image > img:hover{
+    cursor: pointer;
+}
+
+.card .card-description{
+    font-size:1.12em;
+    color: var(--color-description);
+    line-height: 1.31em;
+    font-family: "Roboto";
+    margin-bottom: 5px;
+}
+
+.card .card-chef{
+    font-family: "Roboto";
+    color: var(--color-chef);
+    font-size: 1.12em;
+}
+/* END DISHIES */
+
+/* FOOTER INDEX.HTML */
+footer {
+    width: 100%;
+    height: 62px;
+    text-align: center;
+    background-color: #eee;
+    color: #999;
+    line-height: 62px;
+    font-size: 1em;
+    font-family: "Roboto";
+    position: relative;
+    top: 3em;
+}
+/* END FOOTER INDEX.HTML*/
+
+/* START ABOUT CONTAINER */
+.about-container{
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.about-container div > h1 {
+    font-size: 1.5em;
+    line-height: 1.75em;
+    color: var(--color-title-about);
+    font-family: "Roboto";
+    margin-bottom: 20px;
+}
+
+.about-container div > p {
+    font-size: 1.12em;
+    line-height: 1.75em;
+    color: var(--color-paragraph-about);
+    font-family: "Roboto";
+    margin-bottom: 30px;
+}
+.about-medium-title{
+    font-size: 1.25em !important;
+    line-height: 1.5em !important;
+    font-family: "Roboto"!important;
+}
+.footer-about {
+    top: 0;
+}
+/* END ABOUT CONTAINER  */
+/* START RECEITAS CONTAINER */
+.dishes-container-receitas {
+    max-width: 940px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card-receitas .card-description{
+    font-size:1.12em;
+    color: var(--color-description);
+    line-height: 1.31em;
+    font-family: "Roboto";
+    margin-bottom: 5px;
+}
+
+.card-receitas .card-chef{
+    font-family: "Roboto";
+    color: var(--color-chef);
+    font-size: 1.12em;
+}
+/* END RECEITAS CONTAINER */
+
+/* START MODAL RECEITAS */
+.modal-overlay{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    position: relative;
+    width: 660px;
+    height: 413px;
+    background-color: #fff;
+    border-radius: 16px;
+    margin: 17vh auto;
+}
+
+.modal .close-modal{
+    color: #000;
+    position: absolute;
+    right: 23px;
+    top: 8px;
+    cursor: pointer;
+}
+/* MODAL.ACTIVE */
+.modal-overlay.active{
+   opacity: 1;
+   visibility: visible;
+}
+
+.modal-content{
+    position: relative;
+    width: 600px;
+    height: 200px;
+    margin: 0 auto;
+    
+}
+.modal-image{
+    position: relative;
+    top: 45px;
+}
+.modal-description {
+    color: var(--color-description);
+    font-size: 1.5em;
+    line-height: 1.75em;
+    position: relative;
+    top: 50px;
+    text-align: center;
+    font-family: "Roboto";
+}
+.modal-chef {
+    font-family: "Roboto";
+    color: var(--color-chef);
+    font-size: 1.12em;
+    line-height: 1.31em;
+    position: relative;
+    text-align: center;
+    top: 50px;
+}
